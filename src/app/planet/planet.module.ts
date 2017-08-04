@@ -16,4 +16,3 @@ import { PlanetRoutingModule } from './planet.routing.module';
   providers: [],
 })
 export class PlanetModule {}
-
