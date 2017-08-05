@@ -87,11 +87,18 @@ a:hover{
   max-width: 110px;
   background-color: rgba(0, 0, 0, 1);
 }
+.center{
+  width: 100%;
+  text-align: center;
+}
 .large{
   font-size: 48px;
 }
 .white{
   color:#fff;
+}
+.grey{
+  color: #bcbcbc;
 }
 .black{
   color: #000;
@@ -128,4 +135,16 @@ a:hover{
     border: none;
     background-color: #ffe81f;
     color: #000000;
+}
+.title-details{
+  font-weight: 500;
+  font-size: 22px;
+}
+.details{
+  color:#bcbcbc;
+}
+.description{
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0;
 }

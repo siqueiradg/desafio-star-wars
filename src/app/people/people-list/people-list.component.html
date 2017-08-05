@@ -23,7 +23,7 @@
   </div>
   <div class="bloco">
     <div class="person" *ngFor="let people of peoples | orderby: order | searchfilter: filter">
-      <a href="">
+      <a [routerLink]="['/people/id/', splitUrl(people.url)]">
         <div class="circle">
           <i class="material-icons large yellow">person</i>
         </div>

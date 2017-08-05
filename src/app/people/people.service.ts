@@ -34,8 +34,8 @@ export class PeopleService {
       );
   }
 
-  getPeoplesById(id: String): Observable<People[]> {
-    return this.http.get(this.urlPeople)
+  getPeoplesById(id: String): Observable<People> {
+    return this.http.get(this.urlPeople + id)
       .map(
         res => res.json()
       );

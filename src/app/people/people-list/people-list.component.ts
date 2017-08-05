@@ -70,4 +70,9 @@ export class PeopleListComponent implements OnInit {
       }
     );
   }
+
+  private splitUrl(url: String) {
+    const value = url.replace('https://swapi.co/api/people/', '').replace('/', '');
+    return value;
+  }
 }
