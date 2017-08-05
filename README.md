@@ -1,7 +1,7 @@
 Bem vindo ao Desafio Star Wars!
 ===================
 
-![desafio](https://cdn.shopify.com/s/files/1/1108/5196/products/PS_-_Challenge_Accepted_Darth_Vadger.png?v=1493913371)
+![desafio](https://raw.githubusercontent.com/siqueiradg/desafio-star-wars/master/github.png)
 
 ----------
 
