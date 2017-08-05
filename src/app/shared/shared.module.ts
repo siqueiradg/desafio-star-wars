@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { MenuHeaderComponent } from './menu-header/menu-header.componen';
+import { TextLimitPipe } from './pipes/text-limit.pipe';
 
 
 @NgModule({
@@ -12,9 +13,10 @@ import { MenuHeaderComponent } from './menu-header/menu-header.componen';
     CommonModule
   ],
   exports: [
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    TextLimitPipe
   ],
-  declarations: [MenuHeaderComponent],
+  declarations: [MenuHeaderComponent, TextLimitPipe],
   providers: [],
 })
 export class SharedModule { }

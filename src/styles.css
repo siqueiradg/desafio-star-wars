@@ -13,7 +13,6 @@
   width: 10px;
   height: 10px;
   background-color: #fff;
-
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -97,10 +96,25 @@ a:hover{
 .yellow{
   color:#ffe81f;
 }
+.btn{
+  margin: 0 auto;
+  display: block;
+  color: #000;
+  text-align: center;
+  border:none;
+}
 .btn-yellow{
   background-color: #ffe81f;
+}
+.btn-grey{
+  background-color: #bcbcbc;
 }
 .people-name{
   display: block;
   text-align: center;
+}
+.divider{
+  margin-bottom: 15px;
+  display: block;
+  clear: both;
 }

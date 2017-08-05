@@ -21,7 +21,7 @@ export class PeopleService {
   }
 
   getPeoplesByPage(page: String): Observable<People[]> {
-    return this.http.get(this.urlPeople)
+    return this.http.get(page.toString())
       .map(
         res => res.json()
       );

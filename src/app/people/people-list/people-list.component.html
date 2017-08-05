@@ -1,14 +1,17 @@
 <app-menu-header></app-menu-header>
 <div class="container">
   <div class="bloco">
-
     <div class="person" *ngFor="let people of peoples">
       <a href="">
         <div class="circle">
           <i class="material-icons large yellow">person</i>
         </div>
-        <span class="people-name">{{ people.name }}</span>
+        <span class="people-name">{{ people.name | textLimit}}</span>
       </a>
     </div>
+    <div class="divider"></div>
+    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getPeoplesByPage(nextPage)">Carregar mais</button>
+    <div class="divider"></div>
+    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getPeoplesByPage(backPage)">Voltar</button>
   </div>
 </div>
