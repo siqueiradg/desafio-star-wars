@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Http, Headers, Response } from '@angular/http';
 
-import { People } from '../people/people';
 import { Planet } from '../planet/planet';
 
 @Injectable()
@@ -27,8 +26,9 @@ export class PlanetService {
       );
   }
 
-  getPlanetsById(id: String): Observable<Planet[]> {
-    return this.http.get(this.urlPlanet)
+  getPlanetsById(id: String): Observable<Planet> {
+    console.log(id);
+    return this.http.get(this.urlPlanet + id)
       .map(
         res => res.json()
       );

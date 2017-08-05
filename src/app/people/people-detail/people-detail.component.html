@@ -23,11 +23,9 @@
       <div class="column">
         <div class="details">
           <span class="description">Same Planet</span>
-          <span class="description"><a href="">asdasdasd</a></span>
-          <span class="description"><a href="">asdasdasd</a></span>
-          <span class="description"><a href="">asdasdasd</a></span>
-          <span class="description"><a href="">asdasdasd</a></span>
-          <span class="description"><a href="">asdasdasd</a></span>
+          <span class="description" *ngFor="let peoplePlanet of peoples">
+            <a [routerLink]="['/people/id/', removeUrlPeople(peoplePlanet.url)]">{{ peoplePlanet.name }}</a>
+          </span>
         </div>
       </div>
     </div>

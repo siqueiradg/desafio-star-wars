@@ -11,6 +11,7 @@ import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { PeopleService } from './people.service';
 import { PeopleDetailResolver } from './people-detail/people-detail.resolver';
+import { PlanetService } from '../planet/planet.service';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { PeopleDetailResolver } from './people-detail/people-detail.resolver';
   ],
   exports: [],
   declarations: [PeopleListComponent, PeopleDetailComponent],
-  providers: [PeopleService, PeopleDetailResolver],
+  providers: [PeopleService, PeopleDetailResolver, PlanetService],
 })
 export class PeopleModule {}
 
