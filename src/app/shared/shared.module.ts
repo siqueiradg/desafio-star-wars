@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 
 import { MenuHeaderComponent } from './menu-header/menu-header.componen';
 import { TextLimitPipe } from './pipes/text-limit.pipe';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 
 @NgModule({
@@ -14,9 +16,9 @@ import { TextLimitPipe } from './pipes/text-limit.pipe';
   ],
   exports: [
     MenuHeaderComponent,
-    TextLimitPipe
+    TextLimitPipe, SearchFilterPipe, OrderByPipe
   ],
-  declarations: [MenuHeaderComponent, TextLimitPipe],
+  declarations: [MenuHeaderComponent, TextLimitPipe, SearchFilterPipe, OrderByPipe],
   providers: [],
 })
 export class SharedModule { }

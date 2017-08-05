@@ -1,7 +1,28 @@
 <app-menu-header></app-menu-header>
 <div class="container">
   <div class="bloco">
-    <div class="person" *ngFor="let people of peoples">
+    <div class="row">
+      <div class="column">
+        <label for="search">Search</label>
+        <input id="search" placeholder="Search by name..." class="yellow search" type="text" name="search" [(ngModel)]="search">
+        <button for="search" class="button go">GO</button>
+      </div>
+      <div class="column">
+        <label for="search">Filter</label>
+        <input id="search" placeholder="Filter by name..." class="yellow" type="text" name="search" [(ngModel)]="search">
+      </div>
+      <div class="column">
+        <label for="orderBy">Order by</label>
+        <select name="order" class="yellow" id="orderBy" [(ngModel)]="order">
+          <option class="black" value="asc">ASC</option>
+          <option class="black" value="desc">DESC</option>
+          <option class="black" value="birth_year">Birth Year</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="bloco">
+    <div class="person" *ngFor="let people of peoples | orderby: order | searchfilter: search">
       <a href="">
         <div class="circle">
           <i class="material-icons large yellow">person</i>
@@ -10,8 +31,8 @@
       </a>
     </div>
     <div class="divider"></div>
-    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getPeoplesByPage(nextPage)">Carregar mais</button>
+    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getPeoplesByPage(nextPage)">Next</button>
     <div class="divider"></div>
-    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getPeoplesByPage(backPage)">Voltar</button>
+    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getPeoplesByPage(backPage)">Back</button>
   </div>
 </div>

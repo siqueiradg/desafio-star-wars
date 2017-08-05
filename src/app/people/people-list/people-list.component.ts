@@ -13,6 +13,8 @@ export class PeopleListComponent implements OnInit {
 
   peoples: People[];
   nextPage: String;
+  search: String;
+  order: String;
   backPage: String;
 
   constructor(private service: PeopleService) {}

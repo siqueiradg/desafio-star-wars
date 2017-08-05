@@ -93,6 +93,9 @@ a:hover{
 .white{
   color:#fff;
 }
+.black{
+  color: #000;
+}
 .yellow{
   color:#ffe81f;
 }
@@ -117,4 +120,12 @@ a:hover{
   margin-bottom: 15px;
   display: block;
   clear: both;
+}
+.search{
+  max-width: 70%;
+}
+.go{
+    border: none;
+    background-color: #ffe81f;
+    color: #000000;
 }
