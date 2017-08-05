@@ -27,6 +27,13 @@ export class PeopleService {
       );
   }
 
+  getPeoplesByName(name: String): Observable<People[]> {
+    return this.http.get(this.urlPeople + '?search=' + name)
+      .map(
+        res => res.json()
+      );
+  }
+
   getPeoplesById(id: String): Observable<People[]> {
     return this.http.get(this.urlPeople)
       .map(

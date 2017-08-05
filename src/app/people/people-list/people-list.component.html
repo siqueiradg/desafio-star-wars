@@ -5,11 +5,11 @@
       <div class="column">
         <label for="search">Search</label>
         <input id="search" placeholder="Search by name..." class="yellow search" type="text" name="search" [(ngModel)]="search">
-        <button for="search" class="button go">GO</button>
+        <button for="search" class="button go" (click)="getPeopleBySearch(search)">GO</button>
       </div>
       <div class="column">
-        <label for="search">Filter</label>
-        <input id="search" placeholder="Filter by name..." class="yellow" type="text" name="search" [(ngModel)]="search">
+        <label for="filter">Filter</label>
+        <input id="filter" placeholder="Filter by name..." class="yellow" type="text" name="filter" [(ngModel)]="filter">
       </div>
       <div class="column">
         <label for="orderBy">Order by</label>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="bloco">
-    <div class="person" *ngFor="let people of peoples | orderby: order | searchfilter: search">
+    <div class="person" *ngFor="let people of peoples | orderby: order | searchfilter: filter">
       <a href="">
         <div class="circle">
           <i class="material-icons large yellow">person</i>

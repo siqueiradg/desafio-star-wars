@@ -15,6 +15,7 @@ export class PeopleListComponent implements OnInit {
   nextPage: String;
   search: String;
   order: String;
+  filter: String;
   backPage: String;
 
   constructor(private service: PeopleService) {}
@@ -39,8 +40,23 @@ export class PeopleListComponent implements OnInit {
   }
 
   private getPeoplesByPage(page): void {
-    console.log(this.nextPage);
     this.service.getPeoplesByPage(page).subscribe(
+      (peoples) => {
+        this.peoples = peoples['results'];
+        this.backPage = peoples['previous'];
+        this.nextPage = peoples['next'];
+      },
+      (error: any) => {
+        console.log('Falha no acesso ao service');
+      },
+      () => {
+        console.log(this.peoples);
+      }
+    );
+  }
+
+  private getPeopleBySearch(name): void {
+    this.service.getPeoplesByName(name).subscribe(
       (peoples) => {
         this.peoples = peoples['results'];
         this.backPage = peoples['previous'];
