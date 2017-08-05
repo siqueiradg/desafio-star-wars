@@ -2,5 +2,13 @@
 <div class="container">
   <div class="bloco">
 
+    <div class="person" *ngFor="let people of peoples">
+      <a href="">
+        <div class="circle">
+          <i class="material-icons large yellow">person</i>
+        </div>
+        <span class="people-name">{{ people.name }}</span>
+      </a>
+    </div>
   </div>
 </div>

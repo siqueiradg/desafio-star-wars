@@ -13,7 +13,7 @@ export class PeopleService {
 
   constructor(private http: Http) {}
 
-  getPeoples(): Observable<People[]> {
+  getPeoples(): Observable<any[]> {
     return this.http.get(this.urlPeople)
       .map(
         res => res.json()

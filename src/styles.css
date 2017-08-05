@@ -1,5 +1,5 @@
 .logo-star{
-  margin:100px 0 0;
+  margin:50px 0 0;
   width:250px;
 }
 
@@ -75,5 +75,32 @@ a:hover{
   margin:20px 0;
   padding:15px;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.person{
+  display: inline-block;
+  margin: 0 18px 50px;
+  max-width: 150px;
+}
+.circle{
+  border-radius: 60px;
+  padding: 30px;
+  max-width: 110px;
+  background-color: rgba(0, 0, 0, 1);
+}
+.large{
+  font-size: 48px;
+}
+.white{
+  color:#fff;
+}
+.yellow{
+  color:#ffe81f;
+}
+.btn-yellow{
+  background-color: #ffe81f;
+}
+.people-name{
+  display: block;
+  text-align: center;
 }
