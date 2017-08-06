@@ -11,7 +11,6 @@ export class SearchFilterPipe implements PipeTransform {
       return peoples;
     }else {
       const filter = search;
-      console.log(filter);
       return peoples.filter(people => people.name.toLowerCase().indexOf(search.toLowerCase()) !== -1);
     }
 

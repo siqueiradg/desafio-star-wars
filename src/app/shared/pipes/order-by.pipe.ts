@@ -9,7 +9,6 @@ export class OrderByPipe implements PipeTransform {
       if (order === 'asc') {
         return peoples.sort(
         (a: any, b: any) => {
-          console.log(a.name, b.name);
           if (a.name < b.name) {
             return -1;
           } else if (a.name > b.name) {
@@ -21,7 +20,6 @@ export class OrderByPipe implements PipeTransform {
       }else if (order === 'desc') {
         return peoples.sort(
         (a: any, b: any) => {
-          console.log(a.name, b.name);
           if (a.name > b.name) {
             return -1;
           } else if (a.name < b.name) {
@@ -33,7 +31,6 @@ export class OrderByPipe implements PipeTransform {
       }else if (order === 'birth_year') {
         return peoples.sort(
         (a: any, b: any) => {
-          console.log(a.birth_year, b.birth_year);
           if (a.birth_year < b.birth_year) {
             return -1;
           } else if (a.birth_year > b.birth_year) {
