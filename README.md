@@ -2,7 +2,7 @@ Bem vindo ao Desafio Star Wars!
 ===================
 
 ![desafio](https://raw.githubusercontent.com/siqueiradg/desafio-star-wars/master/github.png)
-
+Quer dar uma olhadinha? - [demonstração](http://www.siqueiradg.com.br/projetos/desafio-star-wars)
 ----------
 
 
@@ -14,9 +14,6 @@ Faça o download do repositorio, execute o `npm install` para instalar as depend
 > **Obs:**
 
 > - É necessario que se tenha o "npm" instalado na maquina.
-
-#### <i class="icon-file"></i> Instalar Angular CLI
-Execute `npm install -g @angular/cli`
 
 #### <i class="icon-folder-open"></i> Inicie o servidor
 Execute `ng serve`
