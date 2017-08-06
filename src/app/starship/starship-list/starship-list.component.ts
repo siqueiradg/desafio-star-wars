@@ -1,33 +1,33 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Planet } from '../planet';
-import { PlanetService } from '../planet.service';
+import { Starship } from '../starship';
+import { StarshipService } from '../starship.service';
 
 @Component({
-  selector: 'app-planet-list',
-  templateUrl: 'planet-list.component.html'
+  selector: 'app-starship-list',
+  templateUrl: 'starship-list.component.html'
 })
 
-export class PlanetListComponent implements OnInit {
-  planets: Planet[];
+export class StarshipListComponent implements OnInit {
+  starships: Starship[];
   nextPage: String;
   search: String;
   order: String;
   filter: String;
   backPage: String;
 
-  constructor(private service: PlanetService) {}
+  constructor(private service: StarshipService) {}
 
   ngOnInit() {
-    this.getPlanets();
+    this.getStarships();
   }
 
-  private getPlanets(): void {
-    this.service.getPlanets().subscribe(
-      (planets) => {
-        this.planets = planets['results'];
-        this.nextPage = planets['next'];
+  private getStarships(): void {
+    this.service.getStarships().subscribe(
+      (starships) => {
+        this.starships = starships['results'];
+        this.nextPage = starships['next'];
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
@@ -35,13 +35,13 @@ export class PlanetListComponent implements OnInit {
     );
   }
 
-  private getPlanetsByPage(page): void {
+  private getStarshipsByPage(page): void {
     console.log(page);
-    this.service.getPlanetsByPage(page).subscribe(
-      (planets) => {
-        this.planets = planets['results'];
-        this.backPage = planets['previous'];
-        this.nextPage = planets['next'];
+    this.service.getStarshipsByPage(page).subscribe(
+      (starships) => {
+        this.starships = starships['results'];
+        this.backPage = starships['previous'];
+        this.nextPage = starships['next'];
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
@@ -49,12 +49,12 @@ export class PlanetListComponent implements OnInit {
     );
   }
 
-  private getPlanetBySearch(name): void {
-    this.service.getPlanetsByName(name).subscribe(
-      (planets) => {
-        this.planets = planets['results'];
-        this.backPage = planets['previous'];
-        this.nextPage = planets['next'];
+  private getStarshipBySearch(name): void {
+    this.service.getStarshipsByName(name).subscribe(
+      (starships) => {
+        this.starships = starships['results'];
+        this.backPage = starships['previous'];
+        this.nextPage = starships['next'];
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
@@ -62,8 +62,8 @@ export class PlanetListComponent implements OnInit {
     );
   }
 
-  private removeUrlPlanets(url: String) {
-    const value = url.replace('https://swapi.co/api/planets/', '').replace('/', '');
+  private removeUrlStarships(url: String) {
+    const value = url.replace('https://swapi.co/api/starships/', '').replace('/', '');
     return value;
   }
 }

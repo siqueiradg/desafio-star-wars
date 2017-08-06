@@ -5,7 +5,7 @@
       <div class="column">
         <label for="search">Search</label>
         <input id="search" placeholder="Search by name..." class="yellow search" type="text" name="search" [(ngModel)]="search">
-        <button for="search" class="button go" (click)="getPlanetBySearch(search)">GO</button>
+        <button for="search" class="button go" (click)="getStarshipBySearch(search)">GO</button>
       </div>
       <div class="column">
         <label for="filter">Filter</label>
@@ -21,17 +21,17 @@
     </div>
   </div>
   <div class="bloco">
-    <div class="person" *ngFor="let planet of planets | orderby: order | searchfilter: filter">
-      <a [routerLink]="['/planet/id/', removeUrlPlanets(planet.url)]">
+    <div class="person" *ngFor="let starship of starships | orderby: order | searchfilter: filter">
+      <a [routerLink]="['/starship/id/', removeUrlStarships(starship.url)]">
         <div class="circle">
-          <i class="material-icons large yellow">blur_circular</i>
+          <i class="material-icons large yellow">local_airport</i>
         </div>
-        <span class="people-name">{{ planet.name | textLimit}}</span>
+        <span class="people-name">{{ starship.name | textLimit}}</span>
       </a>
     </div>
     <div class="divider"></div>
-    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getPlanetsByPage(nextPage)">Next</button>
+    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getStarshipsByPage(nextPage)">Next</button>
     <div class="divider"></div>
-    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getPlanetsByPage(backPage)">Back</button>
+    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getStarshipsByPage(backPage)">Back</button>
   </div>
 </div>

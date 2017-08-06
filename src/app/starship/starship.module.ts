@@ -4,13 +4,12 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
-import { PlanetListComponent } from './planet-list/planet-list.component';
-import { PlanetRoutingModule } from './planet.routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { PlanetService } from './planet.service';
-import { PlanetDetailResolver } from './planet-detail/planet-detail.resolver';
-import { PeopleService } from '../people/people.service';
+import { StarshipRoutingModule } from './starship.routing.module';
+import { StarshipDetailComponent } from './starship-detail/starship-detail.component';
+import { StarshipListComponent } from './starship-list/starship-list.component';
+import { StarshipDetailResolver } from './starship-detail/starship-detail.resolver';
+import { StarshipService } from './starship.service';
 
 @NgModule({
   imports: [
@@ -19,10 +18,10 @@ import { PeopleService } from '../people/people.service';
     SharedModule,
     FormsModule,
     CommonModule,
-    PlanetRoutingModule
+    StarshipRoutingModule
   ],
   exports: [],
-  declarations: [PlanetListComponent, PlanetDetailComponent],
-  providers: [PlanetService, PlanetDetailResolver, PeopleService],
+  declarations: [StarshipListComponent, StarshipDetailComponent],
+  providers: [StarshipService, StarshipDetailResolver],
 })
-export class PlanetModule {}
+export class StarshipModule {}

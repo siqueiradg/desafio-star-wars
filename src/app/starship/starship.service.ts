@@ -1,40 +1,40 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { Http, Headers, Response } from '@angular/http';
 
-import { Planet } from '../planet/planet';
+import { Starship } from './starship';
 
 @Injectable()
-export class PlanetService {
+export class StarshipService {
 
-  private urlPlanet = 'https://swapi.co/api/planets/';
+  private urlStarship = 'https://swapi.co/api/starships/';
 
   constructor(private http: Http) {}
 
-  getPlanets(): Observable<Planet[]> {
-    return this.http.get(this.urlPlanet)
+  getStarships(): Observable<Starship[]> {
+    return this.http.get(this.urlStarship)
       .map(
         res => res.json()
       );
   }
 
-  getPlanetsByPage(page: String): Observable<Planet[]> {
+  getStarshipsByPage(page: String): Observable<Starship[]> {
     return this.http.get(page.toString())
       .map(
         res => res.json()
       );
   }
 
-  getPlanetsByName(name: String): Observable<Planet[]> {
-    return this.http.get(this.urlPlanet + '?search=' + name)
+  getStarshipsByName(name: String): Observable<Starship[]> {
+    return this.http.get(this.urlStarship + '?search=' + name)
       .map(
         res => res.json()
       );
   }
 
-  getPlanetsById(id: String): Observable<Planet> {
-    return this.http.get(this.urlPlanet + id)
+  getStarshipsById(id: String): Observable<Starship> {
+    return this.http.get(this.urlStarship + id)
       .map(
         res => res.json()
       );

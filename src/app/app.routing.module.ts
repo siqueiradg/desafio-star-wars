@@ -5,11 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/people/list', pathMatch: 'full'},
-  {   path: 'people',
-        loadChildren: 'app/people/people.module#PeopleModule',
+  { path: 'people',
+    loadChildren: 'app/people/people.module#PeopleModule',
   },
-  {   path: 'planet',
-        loadChildren: 'app/planet/planet.module#PlanetModule',
+  { path: 'planet',
+    loadChildren: 'app/planet/planet.module#PlanetModule',
+  },
+  { path: 'vehicle',
+    loadChildren: 'app/vehicle/vehicle.module#VehicleModule',
+  },
+  { path: 'starship',
+    loadChildren: 'app/starship/starship.module#StarshipModule',
   },
 ];
 

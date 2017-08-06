@@ -2,17 +2,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PlanetListComponent } from './planet-list/planet-list.component';
-import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
-import { PlanetDetailResolver } from './planet-detail/planet-detail.resolver';
+import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
+import { VehicleDetailResolver } from './vehicle-detail/vehicle-detail.resolver';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 
 const routes: Routes = [
-  { path: 'id/:id', component: PlanetDetailComponent,  resolve: [PlanetDetailResolver]},
-  { path: 'list', component: PlanetListComponent }
+  { path: 'id/:id', component: VehicleDetailComponent,  resolve: [VehicleDetailResolver]},
+  { path: 'list', component: VehicleListComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PlanetRoutingModule { }
+export class VehicleRoutingModule { }

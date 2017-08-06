@@ -2,20 +2,20 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/r
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { PlanetService } from '../planet.service';
-import { Planet } from '../planet';
+import { Starship } from '../starship';
+import { StarshipService } from '../starship.service';
 
 
 @Injectable()
-export class PlanetDetailResolver implements Resolve<Planet> {
+export class StarshipDetailResolver implements Resolve<Starship> {
 
-    constructor(private service: PlanetService) {}
+    constructor(private service: StarshipService) {}
 
     resolve(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
         ): Observable<any>|Promise<any>|any {
             const id = route.params['id'];
-            return this.service.getPlanetsById(id);
+            return this.service.getStarshipsById(id);
         }
 }
