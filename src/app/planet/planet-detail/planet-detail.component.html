@@ -1,1 +1,33 @@
 <app-menu-header></app-menu-header>
+<div class="container">
+  <div class="bloco">
+    <div class="row">
+      <span class="center grey title-details">{{ planet.name }}</span>
+    </div>
+  </div>
+  <div class="bloco">
+    <div class="row">
+      <div class="column">
+        <div class="details">
+          <span class="description"><strong>Name:</strong> {{ planet.name }}</span>
+          <span class="description"><strong>Population:</strong> {{ planet.population }}</span>
+          <span class="description"><strong>Rotation Period:</strong> {{ planet.rotation_period }}</span>
+          <span class="description"><strong>Orbital Period:</strong> {{ planet.orbital_period }}</span>
+          <span class="description"><strong>Diameter:</strong> {{ planet.diameter }}</span>
+          <span class="description"><strong>Climate:</strong> {{ planet.climate }}</span>
+          <span class="description"><strong>Gravity:</strong> {{ planet.gravity }}</span>
+          <span class="description"><strong>Terrain:</strong> {{ planet.terrain }}</span>
+          <span class="description"><strong>Surface Water:</strong> {{ planet.surface_water }}</span>
+        </div>
+      </div>
+      <div class="column">
+        <div class="details">
+          <span class="description">Residents</span>
+           <span class="description" *ngFor="let peoplePlanet of peoples">
+            <a [routerLink]="['/people/id/', removeUrlPeople(peoplePlanet.url)]">{{ peoplePlanet.name }}</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

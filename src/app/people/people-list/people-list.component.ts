@@ -32,9 +32,6 @@ export class PeopleListComponent implements OnInit {
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
-      },
-      () => {
-        console.log(this.peoples);
       }
     );
   }
@@ -48,9 +45,6 @@ export class PeopleListComponent implements OnInit {
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
-      },
-      () => {
-        console.log(this.peoples);
       }
     );
   }
@@ -64,9 +58,6 @@ export class PeopleListComponent implements OnInit {
       },
       (error: any) => {
         console.log('Falha no acesso ao service');
-      },
-      () => {
-        console.log(this.peoples);
       }
     );
   }

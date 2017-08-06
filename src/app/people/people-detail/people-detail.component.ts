@@ -39,7 +39,7 @@ export class PeopleDetailComponent implements OnInit, OnDestroy {
     );
   }
 
-  private getPeoplesByPlanet(url): People[] {
+  private getPeoplesByPlanet(url) {
     // hack -> clear array
     this.peoples = [];
 
@@ -61,7 +61,6 @@ export class PeopleDetailComponent implements OnInit, OnDestroy {
         }
       );
     }
-    return null;
   }
 
   private removeUrlPlanet(url: String) {

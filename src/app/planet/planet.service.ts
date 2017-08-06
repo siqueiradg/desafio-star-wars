@@ -20,14 +20,20 @@ export class PlanetService {
   }
 
   getPlanetsByPage(page: String): Observable<Planet[]> {
-    return this.http.get(this.urlPlanet)
+    return this.http.get(page.toString())
+      .map(
+        res => res.json()
+      );
+  }
+
+  getPlanetsByName(name: String): Observable<Planet[]> {
+    return this.http.get(this.urlPlanet + '?search=' + name)
       .map(
         res => res.json()
       );
   }
 
   getPlanetsById(id: String): Observable<Planet> {
-    console.log(id);
     return this.http.get(this.urlPlanet + id)
       .map(
         res => res.json()
