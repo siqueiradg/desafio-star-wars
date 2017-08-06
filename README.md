@@ -2,8 +2,9 @@ Bem vindo ao Desafio Star Wars!
 ===================
 
 ![desafio](https://raw.githubusercontent.com/siqueiradg/desafio-star-wars/master/github.png)
-Quer dar uma olhadinha? - [demonstração](http://www.siqueiradg.com.br/projetos/desafio-star-wars)
+
 ----------
+Quer dar uma olhadinha? - [demonstração](http://www.siqueiradg.com.br/projetos/desafio-star-wars)
 
 
 Como executar o Projeto
