@@ -1,0 +1,37 @@
+<app-menu-header></app-menu-header>
+<div class="container">
+  <div class="bloco">
+    <div class="row">
+      <div class="column">
+        <label for="search">Search</label>
+        <input id="search" placeholder="Search by name..." class="yellow search" type="text" name="search" [(ngModel)]="search">
+        <button for="search" class="button go" (click)="getPlanetBySearch(search)">GO</button>
+      </div>
+      <div class="column">
+        <label for="filter">Filter</label>
+        <input id="filter" placeholder="Filter by name..." class="yellow" type="text" name="filter" [(ngModel)]="filter">
+      </div>
+      <div class="column">
+        <label for="orderBy">Order by</label>
+        <select name="order" class="yellow" id="orderBy" [(ngModel)]="order">
+          <option class="black" value="asc">ASC</option>
+          <option class="black" value="desc">DESC</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="bloco">
+    <div class="person" *ngFor="let planet of planets | orderby: order | searchfilter: filter">
+      <a [routerLink]="['/planet/id/', removeUrlPlanets(planet.url)]">
+        <div class="circle">
+          <i class="material-icons large yellow">blur_circular</i>
+        </div>
+        <span class="people-name">{{ planet.name | textLimit}}</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+    <button *ngIf="nextPage != null" class="btn btn-yellow" (click)="getPlanetsByPage(nextPage)">Next</button>
+    <div class="divider"></div>
+    <button *ngIf="backPage != null" class="btn btn-grey" (click)="getPlanetsByPage(backPage)">Back</button>
+  </div>
+</div>
